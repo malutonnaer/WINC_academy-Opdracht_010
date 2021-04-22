@@ -1,0 +1,82 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 24px;
+    padding: 16px;
+}
+
+.container {
+    height: 100vh;    
+    display:grid;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-gap: 5px;
+}
+
+.site-header {
+    background-color: lightblue;
+}
+
+.site-main {
+    background-color: cornflowerblue;
+}
+
+.widget-area {
+    background-color: darkblue;
+}
+
+.site-footer {
+    background-color: blueviolet;
+}
+
+@media (min-width: 768px) {
+    
+    .container {        
+        grid-template: 3fr 2fr 1fr / 1fr 3fr;        
+    }
+
+    .site-header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    
+    .site-main {
+        
+    }
+    
+    .widget-area {
+       
+    }
+    
+    .site-footer {
+        
+    }
+
+}
+
+@media (min-width: 1024px) {
+    
+    .container {        
+        grid-template: 2fr 10% / 1fr 2fr 1fr;        
+    }
+
+    .site-header {
+        grid-row-start: 1;
+        grid-row-end: -1;
+    }
+    
+    .site-main {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    .widget-area {
+        grid-row-start: 1;
+        grid-row-end: -1;
+    }
+    
+    .site-footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
